@@ -18,17 +18,18 @@ def print_ops():
 
 # [print(n.name) for n in tf.get_default_graph().as_graph_def().node]
 
-def print_global_vars():
-    print(">>>"*10, "Global Variables()", "<<<"*10)
-    all_vars = tf.global_variables()
-    [print(var) for var in all_vars]
-    print("="*20)
+def get_global_vars():
+    global_vars = tf.global_variables()
+    return global_vars
 
-def print_trainable_vars():
+def get_trainable_vars():
     ## Moving mean & moving variance won't be found in trainable_variables
-    print('\n',">>>"*10, "Trainable Variables()", "<<<"*10)
     trainable_vars = tf.trainable_variables()
-    [print(vars) for vars in trainable_vars]
+    return trainable_vars
+
+def print_list(l, name=""):
+    print(">>>"*10, name, "<<<"*10)
+    [print(var) for var in l]
     print("="*20)
 
 # def 
