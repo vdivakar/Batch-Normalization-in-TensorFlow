@@ -16,8 +16,6 @@ def print_ops():
         print(op.name)
     print("="*20)
 
-# [print(n.name) for n in tf.get_default_graph().as_graph_def().node]
-
 def get_global_vars():
     global_vars = tf.global_variables()
     return global_vars
@@ -31,11 +29,6 @@ def print_list(l, name=""):
     print(">>>"*10, name, "<<<"*10)
     [print(var) for var in l]
     print("="*20)
-
-# def 
-# bn_vars = [v for v in tf.trainable_variables() if "batch_norm" in v.name]
-# print(bn_vars)
-
 
 def get_lena():
     #https://homepages.cae.wisc.edu/~ece533/images/lena.png
@@ -74,8 +67,8 @@ def save_model_out(input_float, out_name="model_out"):
     img = img*255
     img = np.clip(img, 0, 255)
     img = img.astype(np.uint8)
-    print(img.max())
-    print(img.min())
+    # print(img.max())
+    # print(img.min())
     cv2.imwrite(out_name+".png", img)
     print("Image saved!!", out_name+".png")
 
