@@ -35,7 +35,7 @@ def get_lena():
     lena = cv2.imread("dataset/train_input/lena.png")
     lena = cv2.resize(lena, (512, 512))
     lena = np.reshape(lena, (1, 512, 512, 3))
-    lena = lena / 255.0  #Not normalizing so that we can see lena
+    lena = lena / 255.0
     return lena
 
 def read_img(file):
@@ -63,18 +63,9 @@ def get_te_dataset():
 
 def save_model_out(input_float, out_name="model_out"):
     input_float = np.reshape(input_float, (512, 512, 3))
-    img = input_float #/ input_float.max()
+    img = input_float
     img = img*255
     img = np.clip(img, 0, 255)
     img = img.astype(np.uint8)
-    # print(img.max())
-    # print(img.min())
     cv2.imwrite(out_name+".png", img)
     print("Image saved!!", out_name+".png")
-
-
-'''
-===Notes===
-loss = mse #1 - 10*(tf.math.log((255**2/mse)) / tf.math.log(10.0) ) #PSNR
-# loss = tf.losses.absolute_difference(output, label_placeholder)
-'''
