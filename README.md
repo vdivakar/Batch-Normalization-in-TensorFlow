@@ -16,10 +16,12 @@ __In detail:__ checkout this blog post:
 
 
 
-<br>This repository also contains a dummy dataset of 5 training image pairs & 1 test image. So, you are ready to run it directly.<br>
-<br>Things to try:
-<br>Show dummy dataset->
-Images were taken from here: [Link](https://homepages.cae.wisc.edu/~ece533/images/) <br>
+<br>This repository also contains a dummy dataset of 5 training image pairs & 1 test image. So, you are ready to run it directly.
+<br>__You can try:__ 
+<br>Overfitting the model to the dummy dataset & see image output.
+<br>Printing the moving exponential mean & variance values.
+<br>See how it affects the above when you disable Batch-Norm
+
 ```
 Batch-Normalization-in-TensorFlow/dataset
 ├── test_input
@@ -35,3 +37,16 @@ Batch-Normalization-in-TensorFlow/dataset
     ├── lena.png
     └── peppers.png
 ```
+<p float="left">
+  <img src="/dataset/train_input/lena.png" width="100" />
+  <img src="/dataset/train_input/baboon.png" width="100" /> 
+  <img src="/dataset/train_input/fruits.png" width="100" />
+  <img src="/dataset/train_input/peppers.png" width="100" />
+</p>
+<p float="left">
+  <img src="/dataset/train_label/lena.png" width="100" />
+  <img src="/dataset/train_label/baboon.png" width="100" /> 
+  <img src="/dataset/train_label/fruits.png" width="100" />
+  <img src="/dataset/train_label/peppers.png" width="100" />
+</p>
+<br>Images were taken from here: https://homepages.cae.wisc.edu/~ece533/images/ <br>
