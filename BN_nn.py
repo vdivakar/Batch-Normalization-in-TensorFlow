@@ -1,5 +1,7 @@
 from utils import *
 
+
+
 ## Define Placeholders
 input_placeholder = tf.placeholder(tf.float32, shape=[None,512,512,3], name="inputs")
 label_placeholder = tf.placeholder(tf.float32, shape=[None,512,512,3], name="labels")
@@ -94,7 +96,7 @@ with tf.Session() as sess:
     end = timer()
     print("==> Time to train: {t} sec".format(t=end-start))
 
-    # save_path = saver.save(sess, "checkpoint/model-500.ckpt")
+    # save_path = saver.save(sess, "checkpoint/model.ckpt")
     # print("Model saved in path: %s" % save_path)
     
     out_img = sess.run(output_te, feed_dict={input_placeholder:input_img})
