@@ -11,7 +11,7 @@ Model output: A [512,512,3] tensor which can be saved as 512x512 sized image for
 ![Model](https://github.com/vdivakar/Batch-Normalization-in-TensorFlow/blob/master/network_image.png)<br>
 
 ### How to use tf.nn.batch_normalization()<br>
-__In detail:__ checkout this blog post:
+__In detail:__ checkout this blog post: https://www.divakar-verma.com/post/batch-normalization-tensorflow
 <br>__In short:__ add control_dependencies on moving average & moving variance to update them during Training time.
 
 
